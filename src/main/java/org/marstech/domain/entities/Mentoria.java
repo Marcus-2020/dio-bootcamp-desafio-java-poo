@@ -3,7 +3,7 @@ package org.marstech.domain.entities;
 import java.time.LocalDate;
 import java.util.UUID;
 
-public class Mentoria extends AtividadeBase {
+public class Mentoria extends Conteudo {
 
     private LocalDate dataMentoria;
 
@@ -24,8 +24,8 @@ public class Mentoria extends AtividadeBase {
     }
 
     @Override
-    public long CalcularXp() {
-        return 0;
+    public double CalcularXp() {
+        return XP_PADRAO * 1.5;
     }
 
     @Override

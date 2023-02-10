@@ -2,20 +2,23 @@ package org.marstech.domain.entities;
 
 import java.util.UUID;
 
-abstract class AtividadeBase extends EntidadeBase {
+abstract class Conteudo extends EntidadeBase {
+
+    protected static final int XP_PADRAO = 10;
+
     private String titulo;
     private String descricao;
 
-    public AtividadeBase() {
+    public Conteudo() {
     }
 
-    public AtividadeBase(UUID id, String titulo, String descricao) {
+    public Conteudo(UUID id, String titulo, String descricao) {
         super(id);
         this.titulo = titulo;
         this.descricao = descricao;
     }
 
-    public abstract long CalcularXp();
+    public abstract double CalcularXp();
 
     public String getTitulo() {
         return titulo;

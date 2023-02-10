@@ -2,7 +2,7 @@ package org.marstech.domain.entities;
 
 import java.util.UUID;
 
-public class Curso extends AtividadeBase {
+public class Curso extends Conteudo {
 
     private long cargaHoraria;
 
@@ -15,8 +15,8 @@ public class Curso extends AtividadeBase {
     }
 
     @Override
-    public long CalcularXp() {
-        return 0;
+    public double CalcularXp() {
+        return XP_PADRAO * 1.5;
     }
 
     public long getCargaHoraria() {
